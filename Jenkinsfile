@@ -1,12 +1,12 @@
 pipeline {
     agent {
-        label "jen-node1"
+        label "node1"
     }
     stages {
 
         stage('Pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/SurajBele/studentdata.git'
+                git branch: 'main', url: 'https://github.com/milind55555/Jenkins-Maven-SonarQube-Project.git'
                 echo "Pull successful"
             }
         }
