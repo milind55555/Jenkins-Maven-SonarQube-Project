@@ -20,12 +20,7 @@ pipeline {
                     /opt/apache-maven-3.10.0/bin/mvn clean verify
                 '''
             }
-            post {
-                always {
-                    junit testResults: '**/target/surefire-reports/TEST-*.xml',
-                          allowEmptyResults: true
-                }
-            }
+            
         }
 
         stage('SonarQube Analysis') {
