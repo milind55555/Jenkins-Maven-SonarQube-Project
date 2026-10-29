@@ -35,9 +35,7 @@ pipeline {
                     credentialsId: 'sonar-token'
                 ) {
                     sh '''
-                        /opt/apache-maven-3.10.0/bin/mvn \
-                          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-                          -Dsonar.projectKey=sonar-project
+                        /opt/apache-maven-3.10.0/bin/mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=sonar-project
                     '''
                 }
             }
